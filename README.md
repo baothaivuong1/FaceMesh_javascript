@@ -23,3 +23,8 @@
 If you want to run the demo, you can run the index.html file without installing anything else. Make sure your camera device is available.
 
 If you want to run file locally without internet, try to download the cdn file to your folder and change the part to local.
+
+## Run it by your own code:
+Chane the video ID in file main.js line 89:
+
+const video = document.querySelector(your video tag ID here);
