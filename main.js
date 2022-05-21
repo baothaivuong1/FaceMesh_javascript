@@ -5,19 +5,19 @@ function distance(a,b) {
   
 // Function xác định faceshape
 function face_shape(a,b,c,d) {
-    if (c > b > a) {
+    if (c > b && b > a) {
         return 'Triangle'
     }
     else if (a > b) {
         return 'Heart'
     }
-    else if (Math.abs(a-b) <= 20 && Math.abs(b-c) <= 20 && d > a && d > b && d > c) {
+    else if (Math.abs(a-b) <= 20 && Math.abs(b-c)  <= 20 && d > a && d > b && d > c) {
         return 'Oblong'
     }
     else if (Math.abs(b-d) <= 20 && b > a && b > c) {
         return 'Round'
     }
-    else if (d > b > a > c) {
+    else if (d > b && b > a && a > c) {
         return 'Diamond'
     }
     else if (d > b && a > c) {
