@@ -4,23 +4,23 @@ function distance(a,b) {
 }
   
 // Function xác định faceshape
-function face_shape(a,b,c,d) {
-    if (c > b && b > a) {
+function face_shape(forehead_distance, cheekbone_distance, jawline_distance, facelength_distance) {
+    if (jawline_distance > cheekbone_distance && cheekbone_distance > forehead_distance) {
         return 'Triangle'
     }
-    else if (a > b) {
+    else if (forehead_distance > cheekbone_distance) {
         return 'Heart'
     }
-    else if (Math.abs(a-b) <= 20 && Math.abs(b-c)  <= 20 && d > a && d > b && d > c) {
+    else if (Math.abs(forehead_distance-cheekbone_distance) <= 20 && Math.abs(cheekbone_distance-jawline_distance)  <= 20 && facelength_distance > forehead_distance && facelength_distance > cheekbone_distance && facelength_distance > jawline_distance) {
         return 'Oblong'
     }
-    else if (Math.abs(b-d) <= 20 && b > a && b > c) {
+    else if (Math.abs(cheekbone_distance-facelength_distance) <= 20 && cheekbone_distance > forehead_distance && cheekbone_distance > jawline_distance) {
         return 'Round'
     }
-    else if (d > b && b > a && a > c) {
+    else if (facelength_distance > cheekbone_distance && cheekbone_distance > forehead_distance && forehead_distance > jawline_distance) {
         return 'Diamond'
     }
-    else if (d > b && a > c) {
+    else if (facelength_distance > cheekbone_distance && forehead_distance > jawline_distance) {
         return 'Oval'
     }
     else {
